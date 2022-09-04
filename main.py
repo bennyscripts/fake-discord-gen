@@ -7,7 +7,6 @@ if __name__ == "__main__":
     amount = int(input("Amount to generate: "))
     accounts = [generate_token() for _ in range(amount)]
 
-    save_to_file = input("Save to file? (y/n): ")
-    if save_to_file == "y":
+    if input("Save to file? (y/n): ") == "y":
         with open("accounts.txt", "w") as f:
             f.write("\n".join(accounts))
